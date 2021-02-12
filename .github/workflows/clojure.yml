@@ -44,5 +44,7 @@ jobs:
       uses: DeLaGuardo/setup-clojure@3.1
       with:
         lein: latest
+    - name: Install deps
+      run: npm ci
     - name: Run ClojureScript test
       run: ./scripts/test.sh cljs
